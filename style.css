@@ -887,6 +887,10 @@ BUTTONS
 
     transition:.35s;
 
+    position:relative;
+
+    overflow:hidden;
+
 }
 
 .primary-btn{
@@ -920,6 +924,38 @@ BUTTONS
     color:#08111f;
 
     transform:translateY(-8px);
+
+}
+
+/*=========================
+RIPPLE EFFECT
+=========================*/
+
+.ripple{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    transform:scale(0);
+
+    animation:ripple-anim .6s linear;
+
+    background:rgba(255,255,255,.35);
+
+    pointer-events:none;
+
+}
+
+@keyframes ripple-anim{
+
+    to{
+
+        transform:scale(4);
+
+        opacity:0;
+
+    }
 
 }
 
@@ -2576,6 +2612,10 @@ CONTACT
     font-size:17px;
 
     transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
 
 }
 
