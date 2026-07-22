@@ -473,7 +473,7 @@ behavior:"smooth"
 
 const buttons = document.querySelectorAll(
 
-".primary-btn,.secondary-btn,.project-buttons a,.contact-form button"
+".primary-btn,.secondary-btn,.contact-form button"
 
 );
 
