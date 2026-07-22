@@ -2002,6 +2002,10 @@ CONTENT
 
     padding:30px;
 
+    position:relative;
+
+    z-index:5;
+
 }
 
 .project-content h3{
@@ -2072,6 +2076,10 @@ BUTTONS
 
     gap:15px;
 
+    position:relative;
+
+    z-index:10;
+
 }
 
 .project-buttons a{
@@ -2097,6 +2105,12 @@ BUTTONS
     transition:.35s;
 
     font-weight:600;
+
+    position:relative;
+
+    z-index:10;
+
+    cursor:pointer;
 
 }
 
@@ -2133,6 +2147,8 @@ HOVER EFFECT
     opacity:0;
 
     transition:.4s;
+
+    pointer-events:none;
 
 }
 
