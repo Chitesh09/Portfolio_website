@@ -1096,3 +1096,58 @@ console.log(
 "color:#4cc9f0;font-size:14px;"
 
 );
+
+
+//=========================================
+// PROJECT MODALS
+//=========================================
+
+const viewDetailsBtns = document.querySelectorAll(".view-details-btn");
+
+const projectModals = document.querySelectorAll(".project-modal");
+
+function openModal(id) {
+
+    const modal = document.getElementById(id);
+
+    if (!modal) return;
+
+    modal.classList.add("open");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+function closeAllModals() {
+
+    projectModals.forEach(m => m.classList.remove("open"));
+
+    document.body.style.overflow = "";
+
+}
+
+viewDetailsBtns.forEach(btn => {
+
+    btn.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        openModal(this.dataset.modal);
+
+    });
+
+});
+
+projectModals.forEach(modal => {
+
+    modal.querySelector(".modal-overlay").addEventListener("click", closeAllModals);
+
+    modal.querySelector(".modal-close").addEventListener("click", closeAllModals);
+
+});
+
+document.addEventListener("keydown", e => {
+
+    if (e.key === "Escape") closeAllModals();
+
+});
